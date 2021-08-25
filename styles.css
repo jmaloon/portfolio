@@ -1,0 +1,139 @@
+:root {
+  --font-primary: #000000;
+  --font-secondary: #5b5b5b;
+  --palette-primary: #7879f1;
+  --surface-primary: #ffffff;
+  --surface-secondary: #f2f2f2;
+  --shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+body {
+  color: var(--font-primary);
+  background-color: var(--background);
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-weight: 400;
+  margin: 0;
+}
+
+main {
+  margin-top: 60px;
+}
+
+.text-title-1 {
+  font-size: 4rem;
+}
+.text-title-2 {
+  font-size: 3rem;
+}
+.text-title-3 {
+  font-size: 2rem;
+}
+.text-subtitle-1 {
+  font-size: 1.5rem;
+}
+.text-subtitle-2 {
+  font-size: 1.25rem;
+}
+.text-body-1 {
+  font-size: 1.125rem;
+}
+.text-body-2 {
+  font-size: 1rem;
+}
+.text-overline {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.2px;
+}
+
+.text-color-font-primary {
+  color: var(--font-primary);
+}
+.text-color-font-secondary {
+  color: var(--font-secondary);
+}
+.text-color-primary {
+  color: var(--palette-primary);
+}
+
+.appbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+
+  background-color: var(--surface-secondary);
+  box-shadow: var(--shadow);
+}
+
+.appbar > nav > ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+.appbar > nav > ol > * + * {
+  margin-left: 56px;
+}
+
+.banner,
+.content {
+  margin: 200px auto;
+  max-width: 520px;
+}
+
+.banner > h1 {
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.content > * + * {
+  margin-top: 48px;
+}
+.content > section {
+  position: relative;
+}
+.content > section > h5 {
+  position: absolute;
+  top: 2px;
+  right: calc(100% + 20px);
+}
+.content > section > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 12px;
+}
