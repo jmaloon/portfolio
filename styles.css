@@ -1,4 +1,5 @@
 :root {
+  --appbar-height: 60px;
   --font-primary: #000000;
   --font-secondary: #5b5b5b;
   --palette-primary: #7879f1;
@@ -36,8 +37,14 @@ span {
   margin: 0;
 }
 
-main {
-  margin-top: 60px;
+.font-weight-regular {
+  font-weight: 400;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-bold {
+  font-weight: 700;
 }
 
 .text-title-1 {
@@ -67,6 +74,9 @@ main {
   text-transform: uppercase;
   letter-spacing: -0.2px;
 }
+.text-caption {
+  font-size: .75rem; 
+}
 
 .text-color-font-primary {
   color: var(--font-primary);
@@ -83,7 +93,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: var(--appbar-height);
 
   display: flex;
   align-items: center;
@@ -92,6 +102,7 @@ main {
 
   background-color: var(--surface-secondary);
   box-shadow: var(--shadow);
+  z-index: 1;
 }
 
 .appbar > nav > ol {
@@ -105,35 +116,73 @@ main {
   margin-left: 56px;
 }
 
-.banner,
-.content {
-  margin: 200px auto;
+.content.banner {
+  margin: calc(200px + var(--appbar-height)) auto 200px;
+} 
+.content.banner > p {
   max-width: 520px;
 }
-
 .banner > h1 {
   margin-top: 8px;
   margin-bottom: 40px;
 }
 
+.content {
+  margin: 120px auto;
+  max-width: 680px;
+}
 .content > * + * {
   margin-top: 48px;
 }
 .content > section {
   position: relative;
 }
-.content > section > h5 {
+
+.label {
   position: absolute;
-  top: 2px;
+  width: fit-content;
+  top: 8px;
   right: calc(100% + 20px);
+  text-align: right;  
 }
-.content > section > ul {
+
+.avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #c4c4c4;
+  border-radius: 20px;
+}
+
+.skills > section > ul {
   list-style: none;
   margin: 0;
   padding: 0;
-
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
   row-gap: 12px;
+}
+.skills > section > ul > li {
+  display: flex;
+  align-items: center;
+}
+.skills > section > ul > li > .avatar {
+  flex-shrink: 0; 
+  margin-right: 16px;
+}
+ 
+.experience > section {
+  display: flex;
+}
+.experience .label {
+  top: 2px;
+}
+.experience .avatar {
+  margin-right: 16px;
+}
+.experience > section h6 {
+  margin-top: 6px;  
+  margin-bottom: 8px; 
 }
