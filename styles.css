@@ -153,6 +153,15 @@ span {
   background-color: #c4c4c4;
   border-radius: 20px;
 }
+.icon {
+  width: 40px;
+  height: 40px;
+  color: var(--font-secondary);
+}
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
 
 .skills > section > ul {
   list-style: none;
@@ -168,9 +177,12 @@ span {
   display: flex;
   align-items: center;
 }
-.skills > section > ul > li > .avatar {
+.skills > section > ul > li:hover > svg {
+  color: var(--palette-primary);
+}
+.skills > section > ul > li > .avatar, .skills > section > ul > li > .icon {
   flex-shrink: 0; 
-  margin-right: 16px;
+  margin-right: 12px;
 }
  
 .experience > section {
@@ -180,7 +192,7 @@ span {
   top: 2px;
 }
 .experience .avatar {
-  margin-right: 16px;
+  margin-right: 12px;
 }
 .experience > section h6 {
   margin-top: 6px;  
