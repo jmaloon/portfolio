@@ -105,6 +105,12 @@ span {
   z-index: 1;
 }
 
+.appbar svg {
+  width: 44px;
+  height: 40px;
+
+  color: var(--palette-primary);
+}
 .appbar > nav > ol {
   list-style: none;
   margin: 0;
@@ -191,8 +197,14 @@ span {
 .experience .label {
   top: 2px;
 }
-.experience .avatar {
+.experience .avatar, .experience .icon { 
   margin-right: 12px;
+}
+.experience > section:hover > .icon { 
+  color: var(--palette-primary);
+}
+.experience .label {
+  user-select: none;
 }
 .experience > section h6 {
   margin-top: 6px;  
