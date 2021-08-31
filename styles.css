@@ -1,12 +1,21 @@
 :root {
   --appbar-height: 60px;
-  --font-primary: #000000;
+  --font-primary: #000;
   --font-secondary: #5b5b5b;
   --palette-primary: #7879f1;
   --palette-secondary: #ef5b5b;
-  --surface-primary: #ffffff;
+  --surface-primary: #fff;
   --surface-secondary: #f2f2f2;
   --shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+:root.dark {
+  --font-primary: #fff;
+  --font-secondary: #f4f4f4;
+  --palette-primary: #7879f1;
+  --palette-secondary: #ef5b5b;
+  --surface-primary: #000;
+  --surface-secondary: #444;
+  --shadow: 0px 2px 4px rgba(255, 255, 255, 0.25);
 }
 
 *,
@@ -22,7 +31,7 @@ html {
 
 body {
   color: var(--font-primary);
-  background-color: var(--background);
+  background-color: var(--surface-primary);
   font-family: "Quicksand", sans-serif;
 }
 
