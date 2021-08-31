@@ -3,6 +3,7 @@
   --font-primary: #000000;
   --font-secondary: #5b5b5b;
   --palette-primary: #7879f1;
+  --palette-secondary: #ef5b5b;
   --surface-primary: #ffffff;
   --surface-secondary: #f2f2f2;
   --shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -69,10 +70,10 @@ span {
   font-size: 1rem;
 }
 .text-overline {
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -0.2px;
+  letter-spacing: 0.1rem;
 }
 .text-caption {
   font-size: .75rem; 
@@ -85,6 +86,13 @@ span {
   color: var(--font-secondary);
 }
 .text-color-primary {
+  color: var(--palette-primary);
+}
+
+a {
+  color: var(--palette-secondary);
+}
+a:active {
   color: var(--palette-primary);
 }
 
@@ -105,7 +113,7 @@ span {
   z-index: 1;
 }
 
-.appbar svg {
+.appbar > svg {
   width: 44px;
   height: 40px;
 
@@ -147,18 +155,11 @@ span {
 .label {
   position: absolute;
   width: fit-content;
-  top: 8px;
+  top: 12px;
   right: calc(100% + 20px);
   text-align: right;  
 }
 
-.avatar {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  background-color: #c4c4c4;
-  border-radius: 20px;
-}
 .icon {
   width: 40px;
   height: 40px;
@@ -195,9 +196,9 @@ span {
   display: flex;
 }
 .experience .label {
-  top: 2px;
+  top: 6px;
 }
-.experience .avatar, .experience .icon { 
+.experience .icon { 
   margin-right: 12px;
 }
 .experience > section:hover > .icon { 
@@ -207,6 +208,26 @@ span {
   user-select: none;
 }
 .experience > section h6 {
+  margin-top: 6px;  
+  margin-bottom: 8px; 
+}
+ 
+.certificates > section {
+  display: flex;
+}
+.certificates .label {
+  top: 2px;
+}
+.certificates .icon, .certificates h6 { 
+  margin-right: 12px;
+}
+.certificates > section:hover > .icon { 
+  color: var(--palette-primary);
+}
+.certificates .label {
+  user-select: none;
+}
+.certificates > section h6 {
   margin-top: 6px;  
   margin-bottom: 8px; 
 }
