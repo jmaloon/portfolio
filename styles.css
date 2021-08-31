@@ -170,7 +170,7 @@ a:active {
   height: 100%;
 }
 
-.skills > section > ul {
+.grid > section > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -180,54 +180,31 @@ a:active {
   column-gap: 20px;
   row-gap: 12px;
 }
-.skills > section > ul > li {
+.grid > section > ul > li {
   display: flex;
   align-items: center;
 }
-.skills > section > ul > li:hover > svg {
+.grid > section > ul > li:hover > svg {
   color: var(--palette-primary);
 }
-.skills > section > ul > li > .avatar, .skills > section > ul > li > .icon {
+.grid > section > ul > li > .icon {
   flex-shrink: 0; 
   margin-right: 12px;
 }
  
-.experience > section {
+.list > section {
   display: flex;
 }
-.experience .label {
+.list .label {
   top: 6px;
 }
-.experience .icon { 
+.list .icon { 
   margin-right: 12px;
 }
-.experience > section:hover > .icon { 
+.list > section:hover > .icon { 
   color: var(--palette-primary);
 }
-.experience .label {
-  user-select: none;
-}
-.experience > section h6 {
-  margin-top: 6px;  
-  margin-bottom: 8px; 
-}
- 
-.certificates > section {
-  display: flex;
-}
-.certificates .label {
-  top: 2px;
-}
-.certificates .icon, .certificates h6 { 
-  margin-right: 12px;
-}
-.certificates > section:hover > .icon { 
-  color: var(--palette-primary);
-}
-.certificates .label {
-  user-select: none;
-}
-.certificates > section h6 {
+.list > section h6 {
   margin-top: 6px;  
   margin-bottom: 8px; 
 }
