@@ -85,7 +85,7 @@ span {
   letter-spacing: 0.1rem;
 }
 .text-caption {
-  font-size: .75rem; 
+  font-size: 0.75rem;
 }
 
 .text-color-font-primary {
@@ -141,7 +141,7 @@ a:active {
 
 .content.banner {
   margin: calc(200px + var(--appbar-height)) auto 200px;
-} 
+}
 .content.banner > p {
   max-width: 520px;
 }
@@ -166,7 +166,7 @@ a:active {
   width: fit-content;
   top: 12px;
   right: calc(100% + 20px);
-  text-align: right;  
+  text-align: right;
 }
 
 .icon {
@@ -183,7 +183,7 @@ a:active {
   list-style: none;
   margin: 0;
   padding: 0;
-  
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
@@ -193,27 +193,32 @@ a:active {
   display: flex;
   align-items: center;
 }
+.grid > section > ul > li > svg {
+  transition: transform 160ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transform-origin: 115% 60%;
+}
 .grid > section > ul > li:hover > svg {
   color: var(--palette-primary);
+  transform: rotate(15deg);
 }
 .grid > section > ul > li > .icon {
-  flex-shrink: 0; 
+  flex-shrink: 0;
   margin-right: 12px;
 }
- 
+
 .list > section {
   display: flex;
 }
 .list .label {
   top: 6px;
 }
-.list .icon { 
+.list .icon {
   margin-right: 12px;
 }
-.list > section:hover > .icon { 
+.list > section:hover > .icon {
   color: var(--palette-primary);
 }
 .list > section h6 {
-  margin-top: 6px;  
-  margin-bottom: 8px; 
+  margin-top: 6px;
+  margin-bottom: 8px;
 }
