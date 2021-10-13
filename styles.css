@@ -170,6 +170,7 @@ a:active {
 }
 
 .icon {
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
   color: var(--font-secondary);
@@ -202,7 +203,6 @@ a:active {
   transform: rotate(15deg);
 }
 .grid > section > ul > li > .icon {
-  flex-shrink: 0;
   margin-right: 12px;
 }
 
@@ -214,26 +214,28 @@ a:active {
 }
 .list > section h6 {
   margin-top: 6px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 .list .icon {
   margin-right: 12px;
 }
 .list .date {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 1099px) {
-  .grid .label {
+  .label {
     margin-bottom: 24px;
   }
 
   .list > section {
-    align-items: center;
     flex-wrap: wrap;
   }
-  .list .description {
+  .list .label {
     flex-basis: 100%;
+  }
+  .list .description {
+    flex: 1;
   }
 }
 
