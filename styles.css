@@ -6,7 +6,7 @@
   --palette-secondary: #ef5b5b;
   --surface-primary: #fff;
   --surface-secondary: #f2f2f2;
-  --shadow-color: rgba(0, 0, 0, 0.25);
+  --shadow-color: rgba(0, 0, 0, 0.4);
 
   --content-max-width: 680px;
   --content-min-horizontal-margin: 16px;
@@ -18,11 +18,11 @@
 :root.dark {
   --font-primary: #fff;
   --font-secondary: #f4f4f4;
-  --palette-primary: #7879f1;
-  --palette-secondary: #ef5b5b;
-  --surface-primary: #000;
+  --palette-primary: #84ec80;
+  --palette-secondary: #3983e4;
+  --surface-primary: rgb(20, 20, 20);
   --surface-secondary: #444;
-  --shadow-color: rgba(255, 255, 255, 0.25);
+  --shadow-color: rgba(255, 255, 255, 0.4);
 }
 
 *,
@@ -125,6 +125,9 @@ a {
 }
 a:active {
   color: var(--palette-primary);
+}
+button {
+  cursor: pointer;
 }
 
 /* .appbar {
@@ -264,4 +267,17 @@ a:active {
   .list > section {
     top: 6px;
   }
+}
+
+#theme-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--surface-secondary);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 2px 4px var(--shadow-color);
 }

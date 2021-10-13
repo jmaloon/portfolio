@@ -3,14 +3,22 @@ abcelleraSection?.addEventListener("mouseenter", function () {
   abcelleraSection.querySelector("animate").beginElement();
 });
 
-// // add dark class
-// const className = 'dark';
-// const htmlElement = document.querySelector('html');
+const themeButton = document.querySelector("#theme-button");
+themeButton?.addEventListener("click", function () {
+  // // add dark class
+  const darkClassName = "dark";
+  const rootElement = document.documentElement;
 
-// // does .dark exist already?
-// htmlElement.classList.contains(className);
+  const isDarkModeActive = rootElement.classList.contains(darkClassName);
 
-// // add .dark
-// htmlElement.classList.add(className);
-// // remove .dark
-// htmlElement.classList.remove(className);
+  if (isDarkModeActive) {
+    // if the dark theme is active, we remove the class from the root element
+    rootElement.classList.remove(darkClassName);
+    themeButton.textContent = "🌙";
+    return;
+  }
+
+  // otherwise we activate dark mode by adding the class to the root element
+  rootElement.classList.add(darkClassName);
+  themeButton.textContent = "☀️";
+});
