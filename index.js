@@ -1,8 +1,7 @@
 const abcelleraSection = document.querySelector("#experience_abcellera");
-abcelleraSection.addEventListener('mouseenter', function() {
-    abcelleraSection.querySelector('animate').beginElement();
-})
-
+abcelleraSection?.addEventListener("mouseenter", function () {
+  abcelleraSection.querySelector("animate").beginElement();
+});
 
 // // add dark class
 // const className = 'dark';

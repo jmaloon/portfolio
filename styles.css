@@ -6,7 +6,14 @@
   --palette-secondary: #ef5b5b;
   --surface-primary: #fff;
   --surface-secondary: #f2f2f2;
-  --shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+
+  --content-max-width: 680px;
+  --content-min-horizontal-margin: 16px;
+  --content-horizontal-margin: max(
+    var(--content-min-horizontal-margin),
+    calc((100vw - var(--content-max-width)) / 2)
+  );
 }
 :root.dark {
   --font-primary: #fff;
@@ -15,7 +22,7 @@
   --palette-secondary: #ef5b5b;
   --surface-primary: #000;
   --surface-secondary: #444;
-  --shadow: 0px 2px 4px rgba(255, 255, 255, 0.25);
+  --shadow-color: rgba(255, 255, 255, 0.25);
 }
 
 *,
@@ -118,7 +125,7 @@ a:active {
   padding: 0 32px;
 
   background-color: var(--surface-secondary);
-  box-shadow: var(--shadow);
+  box-shadow: 0px 2px 4px var(--shadow-color);
   z-index: 1;
 }
 
@@ -141,7 +148,7 @@ a:active {
 
 .content.banner {
   /* margin: calc(200px + var(--appbar-height)) auto 200px; */
-  margin: 200px auto;
+  margin: 200px var(--content-horizontal-margin);
 }
 .content.banner > p {
   max-width: 520px;
@@ -152,22 +159,14 @@ a:active {
 }
 
 .content {
-  margin: 120px auto;
-  max-width: 680px;
+  margin: 120px var(--content-horizontal-margin);
+  max-width: var(--content-max-width);
 }
 .content > * + * {
   margin-top: 48px;
 }
 .content > section {
   position: relative;
-}
-
-.label {
-  position: absolute;
-  width: fit-content;
-  top: 12px;
-  right: calc(100% + 20px);
-  text-align: right;
 }
 
 .icon {
@@ -186,7 +185,7 @@ a:active {
   padding: 0;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 210px);
   column-gap: 20px;
   row-gap: 12px;
 }
@@ -210,16 +209,44 @@ a:active {
 .list > section {
   display: flex;
 }
-.list .label {
-  top: 6px;
-}
-.list .icon {
-  margin-right: 12px;
-}
 .list > section:hover > .icon {
   color: var(--palette-primary);
 }
 .list > section h6 {
   margin-top: 6px;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
+}
+.list .icon {
+  margin-right: 12px;
+}
+.list .date {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1099px) {
+  .grid .label {
+    margin-bottom: 24px;
+  }
+
+  .list > section {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .list .description {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .label {
+    position: absolute;
+    width: fit-content;
+    top: 12px;
+    right: calc(100% + 20px);
+    text-align: right;
+  }
+
+  .list > section {
+    top: 6px;
+  }
 }
