@@ -65,34 +65,28 @@ span {
 }
 
 .text-title-1 {
-  font-size: 4rem;
-}
-.text-title-2 {
   font-size: 3rem;
 }
-.text-title-3 {
+.text-title-2 {
   font-size: 2rem;
 }
-.text-subtitle-1 {
+.text-title-3 {
   font-size: 1.5rem;
 }
-.text-subtitle-2 {
+.text-subtitle {
   font-size: 1.25rem;
 }
-.text-body-1 {
-  font-size: 1.125rem;
-}
-.text-body-2 {
+.text-body {
   font-size: 1rem;
 }
 .text-overline {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 .text-caption {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .text-color-font-primary {
@@ -162,11 +156,9 @@ a:active {
   margin: 120px var(--content-horizontal-margin);
   max-width: var(--content-max-width);
 }
-.content > * + * {
-  margin-top: 48px;
-}
 .content > section {
   position: relative;
+  margin-top: 48px;
 }
 
 .icon {
@@ -221,6 +213,30 @@ a:active {
 }
 .list .date {
   margin-bottom: 8px;
+}
+
+@media (min-width: 600px) {
+  .text-title-1 {
+    font-size: 4rem;
+  }
+  .text-title-2 {
+    font-size: 3rem;
+  }
+  .text-title-3 {
+    font-size: 2rem;
+  }
+  .text-subtitle {
+    font-size: 1.25rem;
+  }
+  .text-body {
+    font-size: 1rem;
+  }
+  .text-overline {
+    font-size: 0.875rem;
+  }
+  .text-caption {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 1099px) {
