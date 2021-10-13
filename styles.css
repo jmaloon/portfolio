@@ -65,16 +65,16 @@ span {
 }
 
 .text-title-1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 .text-title-2 {
   font-size: 2rem;
 }
 .text-title-3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .text-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 .text-body {
   font-size: 1rem;
@@ -217,19 +217,16 @@ a:active {
 
 @media (min-width: 600px) {
   .text-title-1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .text-title-2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .text-title-3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .text-subtitle {
     font-size: 1.25rem;
-  }
-  .text-body {
-    font-size: 1rem;
   }
   .text-overline {
     font-size: 0.875rem;
