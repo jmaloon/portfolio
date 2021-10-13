@@ -269,15 +269,13 @@ button {
   }
 }
 
-#theme-button {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 40px;
-  height: 40px;
-
-  background-color: var(--surface-secondary);
-  border-radius: 50%;
-  border: none;
-  box-shadow: 0px 2px 4px var(--shadow-color);
+#theme-button > span {
+  display: none;
+  visibility: hidden;
+}
+#theme-button:before {
+  content: "🌙";
+}
+.dark #theme-button:before {
+  content: "🌙";
 }
