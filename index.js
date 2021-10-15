@@ -3,7 +3,7 @@ abcelleraSection?.addEventListener("mouseenter", function () {
   abcelleraSection.querySelector("animate").beginElement();
 });
 
-const themeButton = document.querySelector("#theme-button");
+const themeButton = document.querySelector("button#dark-mode");
 themeButton?.addEventListener("click", function () {
   const darkClassName = "dark";
   const rootElement = document.documentElement;
@@ -13,11 +13,11 @@ themeButton?.addEventListener("click", function () {
     // if the dark theme is active, we remove the class from the root element
     rootElement.classList.remove(darkClassName);
     // themeButton.textContent = "🌙";
-    themeButton.firstChild.textContent = "Dark";
+    // themeButton.firstChild.textContent = "Dark";
     return;
   }
 
   // otherwise we activate dark mode by adding the class to the root element
   rootElement.classList.add(darkClassName);
-  themeButton.firstChild.textContent = "Light";
+  // themeButton.firstChild.textContent = "Light";
 });

@@ -78,6 +78,8 @@ span {
 }
 .text-body {
   font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4em;
 }
 .text-overline {
   font-size: 0.9rem;
@@ -239,15 +241,11 @@ button {
   margin-bottom: 8px;
 }
 
-#theme-button > span {
-  display: none;
-  visibility: hidden;
+button#dark-mode:after {
+  content: " 🌙";
 }
-#theme-button:before {
-  content: "🌙";
-}
-.dark #theme-button:before {
-  content: "🌙";
+.dark button#dark-mode:after {
+  content: " ☀️";
 }
 
 @media (max-width: 1099px) {
