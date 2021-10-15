@@ -20,7 +20,7 @@
   --font-secondary: hsla(60, 22%, 74%, 1);
   --palette-primary: hsla(60, 81%, 71%, 1);
   --palette-secondary: hsla(180, 82%, 65%, 1);
-  --surface-primary: hsla(60, 25%, 11%, 1);
+  --surface-primary: hsla(60, 15%, 10%, 1);
   --surface-secondary: hsla(60, 7%, 44%, 1);
   --shadow-color: hsla(60, 33%, 11%, 1);
 }
@@ -208,8 +208,11 @@ button:hover::before {
   margin-top: 48px;
 }
 
-.introduction p {
+.introduction h3 {
   margin-top: 48px;
+}
+.introduction p {
+  margin-top: 16px;
 }
 .introduction button {
   margin-top: 24px;
@@ -258,7 +261,7 @@ button:hover::before {
 .list > section:hover > .icon {
   color: var(--palette-primary);
 }
-.list > section h6 {
+.list > section h4 {
   height: 40px;
   line-height: 40px;
 }
