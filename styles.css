@@ -129,7 +129,28 @@ a:active {
   color: var(--palette-primary);
 }
 button {
+  position: relative;
+  padding: 10px 32px;
+
+  color: var(--font-primary);
+  background: none;
+  border: 1px solid var(--palette-primary);
+  border-radius: 4px;
+
   cursor: pointer;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--palette-primary);
+  opacity: 0;
+}
+button:hover::before {
+  opacity: 0.08;
 }
 
 /* .appbar {
@@ -168,7 +189,7 @@ button {
 
 .content.banner {
   /* margin: calc(200px + var(--appbar-height)) auto 200px; */
-  margin: 200px var(--content-horizontal-margin);
+  margin: 200px var(--content-horizontal-margin) 120px;
 }
 .content.banner > p {
   max-width: 520px;
@@ -185,6 +206,13 @@ button {
 .content > section {
   position: relative;
   margin-top: 48px;
+}
+
+.introduction p {
+  margin-top: 48px;
+}
+.introduction button {
+  margin-top: 24px;
 }
 
 .icon {
