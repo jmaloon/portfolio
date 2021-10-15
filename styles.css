@@ -269,10 +269,10 @@ button:hover::before {
   margin-bottom: 8px;
 }
 
-button#dark-mode:after {
+button#dark-mode-toggle:after {
   content: " 🌙";
 }
-.dark button#dark-mode:after {
+.dark button#dark-mode-toggle:after {
   content: " ☀️";
 }
 
