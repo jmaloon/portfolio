@@ -189,7 +189,7 @@ button:hover::before {
 
 .content.banner {
   /* margin: calc(200px + var(--appbar-height)) auto 200px; */
-  margin: 200px var(--content-horizontal-margin) 120px;
+  margin: 200px var(--content-horizontal-margin);
 }
 .content.banner > p {
   max-width: 520px;
