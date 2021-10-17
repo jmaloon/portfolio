@@ -69,19 +69,23 @@ span {
 
 .text-title-1 {
   font-size: 2.8rem;
+  letter-spacing: 0.01em;
 }
 .text-title-2 {
   font-size: 2rem;
+  letter-spacing: 0.01em;
 }
 .text-title-3 {
   font-size: 1.6rem;
+  letter-spacing: 0.02em;
 }
 .text-subtitle {
   font-size: 1.2rem;
+  letter-spacing: 0.01em;
 }
 .text-body {
   font-size: 1rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   line-height: 1.4em;
 }
 .text-overline {
@@ -92,6 +96,16 @@ span {
 }
 .text-caption {
   font-size: 0.8rem;
+}
+
+.fonts-loaded .text-subtitle,
+.fonts-loaded .text-title-1,
+.fonts-loaded .text-title-2,
+.fonts-loaded .text-title-3 {
+  letter-spacing: 0;
+}
+.fonts-loaded .text-body {
+  letter-spacing: 0.02em;
 }
 
 @media (min-width: 600px) {
