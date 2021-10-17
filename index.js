@@ -20,7 +20,7 @@ darkModeButton?.addEventListener("click", function () {
 
 const cssButton = document.querySelector("button#css-toggle");
 cssButton?.addEventListener("click", function () {
-  const stylesheet = document.styleSheets.item(3)
+  const stylesheet = document.styleSheets.item(2);
   const isStyleSheetDisabled = stylesheet.disabled;
 
   // if the stylesheet is already disabled, no need to confirm action
@@ -34,6 +34,6 @@ cssButton?.addEventListener("click", function () {
   );
 
   if (confirmed) {
-    stylesheet.disabled = true; 
+    stylesheet.disabled = true;
   }
 });
