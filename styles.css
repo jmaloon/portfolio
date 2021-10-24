@@ -2,6 +2,7 @@
   --font-family: sans-serif;
   --appbar-height: 60px;
 
+  --banner-vertical-margin: 120px;
   --content-max-width: 680px;
   --content-min-horizontal-margin: 16px;
   --content-horizontal-margin: max(
@@ -108,27 +109,6 @@ span {
   letter-spacing: 0.02em;
 }
 
-@media (min-width: 600px) {
-  .text-title-1 {
-    font-size: 3.5rem;
-  }
-  .text-title-2 {
-    font-size: 2.5rem;
-  }
-  .text-title-3 {
-    font-size: 1.75rem;
-  }
-  .text-subtitle {
-    font-size: 1.25rem;
-  }
-  .text-overline {
-    font-size: 0.875rem;
-  }
-  .text-caption {
-    font-size: 0.75rem;
-  }
-}
-
 .text-color-primary {
   color: var(--palette-text-primary);
 }
@@ -204,8 +184,16 @@ button:hover::before {
 } */
 
 .content.banner {
-  /* margin: calc(200px + var(--appbar-height)) auto 200px; */
-  margin: 200px var(--content-horizontal-margin);
+  height: calc(
+    100vh - var(--banner-vertical-margin) - var(--banner-vertical-margin)
+  );
+  max-height: 500px;
+  min-height: 200px;
+  margin: var(--banner-vertical-margin) var(--content-horizontal-margin);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .content.banner > p {
   max-width: 520px;
@@ -293,6 +281,31 @@ button#dark-mode-toggle:after {
 }
 .dark button#dark-mode-toggle:after {
   content: " ☀️";
+}
+
+@media (min-width: 600px) {
+  :root {
+    --banner-vertical-margin: 200px;
+  }
+
+  .text-title-1 {
+    font-size: 3.5rem;
+  }
+  .text-title-2 {
+    font-size: 2.5rem;
+  }
+  .text-title-3 {
+    font-size: 1.75rem;
+  }
+  .text-subtitle {
+    font-size: 1.25rem;
+  }
+  .text-overline {
+    font-size: 0.875rem;
+  }
+  .text-caption {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 1099px) {
