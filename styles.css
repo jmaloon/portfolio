@@ -2,7 +2,6 @@
   --font-family: sans-serif;
   --appbar-height: 60px;
 
-  --banner-vertical-margin: 120px;
   --content-max-width: 680px;
   --content-min-horizontal-margin: 16px;
   --content-horizontal-margin: max(
@@ -12,18 +11,18 @@
 
   --palette-accent-primary: hsla(220, 80%, 50%, 1);
   --palette-accent-secondary: hsla(0, 100%, 30%, 1);
-  --palette-surface-primary: hsla(216, 71%, 97%, 1);
+  --palette-surface-primary: hsla(216, 70%, 95%, 1);
   --palette-surface-secondary: hsla(213, 14%, 88%, 1);
-  --palette-text-primary: hsla(220, 81%, 12%, 1);
-  --palette-text-secondary: hsla(220, 24%, 42%, 1);
+  --palette-text-primary: hsla(220, 80%, 10%, 1);
+  --palette-text-secondary: hsla(220, 30%, 40%, 1);
 }
 :root.dark {
   --palette-accent-primary: hsla(90, 80%, 70%, 1);
   --palette-accent-secondary: hsla(300, 50%, 80%, 1);
-  --palette-surface-primary: hsla(90, 30%, 10%, 1);
+  --palette-surface-primary: hsla(90, 30%, 5%, 1);
   --palette-surface-secondary: hsla(87, 5%, 42%, 1);
-  --palette-text-primary: hsla(90, 82%, 96%, 1);
-  --palette-text-secondary: hsla(90, 14%, 75%, 1);
+  --palette-text-primary: hsla(90, 20%, 95%, 1);
+  --palette-text-secondary: hsla(90, 20%, 75%, 1);
 }
 :root.fonts-loaded {
   --font-family: "Quicksand", sans-serif;
@@ -184,12 +183,7 @@ button:hover::before {
 } */
 
 .content.banner {
-  height: calc(
-    100vh - var(--banner-vertical-margin) - var(--banner-vertical-margin)
-  );
-  max-height: 500px;
-  min-height: 200px;
-  margin: var(--banner-vertical-margin) var(--content-horizontal-margin);
+  margin: 240px var(--content-horizontal-margin) 120px;
 
   display: flex;
   flex-direction: column;
@@ -284,8 +278,11 @@ button#dark-mode-toggle:after {
 }
 
 @media (min-width: 600px) {
-  :root {
-    --banner-vertical-margin: 200px;
+  .content.banner {
+    height: calc(100vh - 200px - 200px);
+    max-height: 500px;
+    min-height: 200px;
+    margin: 200px var(--content-horizontal-margin);
   }
 
   .text-title-1 {
