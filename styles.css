@@ -11,16 +11,14 @@
 
   --palette-accent-primary: hsla(220, 80%, 50%, 1);
   --palette-accent-secondary: hsla(0, 100%, 30%, 1);
-  --palette-surface-primary: hsla(216, 70%, 95%, 1);
-  --palette-surface-secondary: hsla(213, 14%, 88%, 1);
+  --palette-surface: hsla(216, 70%, 95%, 1);
   --palette-text-primary: hsla(220, 80%, 10%, 1);
   --palette-text-secondary: hsla(220, 30%, 40%, 1);
 }
 :root.dark {
   --palette-accent-primary: hsla(90, 80%, 70%, 1);
   --palette-accent-secondary: hsla(300, 50%, 80%, 1);
-  --palette-surface-primary: hsla(90, 30%, 5%, 1);
-  --palette-surface-secondary: hsla(87, 5%, 42%, 1);
+  --palette-surface: hsla(90, 30%, 5%, 1);
   --palette-text-primary: hsla(90, 20%, 95%, 1);
   --palette-text-secondary: hsla(90, 20%, 75%, 1);
 }
@@ -41,7 +39,7 @@ html {
 
 body {
   color: var(--palette-text-primary);
-  background-color: var(--palette-surface-primary);
+  background-color: var(--palette-surface);
   font-family: var(--font-family);
 }
 
@@ -148,39 +146,6 @@ button::before {
 button:hover::before {
   opacity: 0.08;
 }
-
-/* .appbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--appbar-height);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 32px;
-
-  background-color: var(--palette-surface-secondary);
-  z-index: 1; 
-}
-
-.appbar > svg {
-  width: 44px;
-  height: 40px;
-
-  color: var(--palette-accent-primary);
-}
-.appbar > nav > ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-}
-.appbar > nav > ol > * + * {
-  margin-left: 56px;
-} */
 
 .content.banner {
   margin: 240px var(--content-horizontal-margin) 120px;
