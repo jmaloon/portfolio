@@ -37,3 +37,18 @@ cssButton?.addEventListener("click", function () {
     stylesheet.disabled = true;
   }
 });
+
+const fontButton = document.querySelector("button#font-toggle");
+fontButton?.addEventListener("click", function () {
+  const foutClassName = "fonts-loaded";
+  const rootElement = document.documentElement;
+
+  const isLoadedFontActive = rootElement.classList.contains(foutClassName);
+  if (isLoadedFontActive) {
+    // if the loaded font is enabled, we remove the class from the root element
+    rootElement.classList.remove(foutClassName);
+    return;
+  }
+  // otherwise we activate dark mode by adding the class to the root element
+  rootElement.classList.add(foutClassName);
+});

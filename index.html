@@ -64,18 +64,24 @@
       </header>
       <!-- TESTS -->
       <div class="content introduction">
-        <h2 class="text-title-3">
+        <h2 class="text-title-3">Welcome to my playground!</h2>
+        <p class="text-body">
           This is a digital space for me to try new things and showcase some of
           my skills.
-        </h2>
-        <h3 class="text-subtitle text-color-font-secondary">Disabled CSS</h3>
-        <p class="text-body">
-          I built this website using a single HTML file with only one CSS file
-          (well maybe two) and one JS file. I try my best to keep things clean
-          and simple but I also make sure to keep things accessible, even
-          without CSS. Take a look at how this site looks without CSS.
         </p>
-        <button id="css-toggle">Toggle CSS</button>
+
+        <h3 class="text-subtitle text-color-font-secondary">Font Loading</h3>
+        <p class="text-body">
+          This website uses the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
+          <b>T</b>ext (FOUT) loading strategy to handle font loading. The FOUT strategy renders a system font until the web font is loaded and ready to be presented. This functionality can be achieved with the browser natively using the <code>font-display: swap</code> property, however I chose to implement using JavaScript for better support and more control.
+        </p>
+        <p class="text-body">
+          Handling font loading is only part of the story. While the FOUT strategy doesn't block page rendering, it may lead to dramatic layout shifts when the system font is replaced by the web font. The layout shifts cannot be totally avoided but they can be minimized by managing the differences in type kerning, leading, and tracking. 
+        </p>
+        <p class="text-body">
+          The button below will change the font for the page. Click and observe how the content shifts when the font changes!
+        </p>
+        <button id="font-toggle">Toggle Font</button>
 
         <h3 class="text-subtitle text-color-font-secondary">Dark Mode</h3>
         <p class="text-body">
@@ -85,6 +91,15 @@
           document makes this super easy.
         </p>
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+        <h3 class="text-subtitle text-color-font-secondary">Disabled CSS</h3>
+        <p class="text-body">
+          I built this website using a single HTML file with only one CSS file
+          (well maybe two) and one JS file. I try my best to keep things clean
+          and simple but I also make sure to keep things accessible, even
+          without CSS. Take a look at how this site looks without CSS.
+        </p>
+        <button id="css-toggle">Toggle CSS</button>
       </div>
       <!-- SKILLS -->
       <div class="content grid">
