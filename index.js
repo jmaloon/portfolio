@@ -10,6 +10,16 @@ hueInput?.addEventListener("input", (event) => {
     event.target.value
   );
 });
+const huePresetButtons = document.querySelectorAll('button[name="hue-preset"]');
+huePresetButtons.forEach((huePresetButton) =>
+  huePresetButton.addEventListener("click", function () {
+    const { hueValue } = huePresetButton.dataset;
+    // assign input value
+    hueInput.value = hueValue;
+    // assign css variable
+    document.documentElement.style.setProperty("--palette-hue", hueValue);
+  })
+);
 
 const darkModeButton = document.querySelector("button#dark-mode-toggle");
 darkModeButton?.addEventListener("click", function () {
@@ -23,10 +33,12 @@ darkModeButton?.addEventListener("click", function () {
   if (isDarkModeActive) {
     // if the dark theme is active, we remove the class from the root element
     rootElement.classList.remove(darkClassName);
+    hueInput.value = 220;
     return;
   }
   // otherwise we activate dark mode by adding the class to the root element
   rootElement.classList.add(darkClassName);
+  hueInput.value = 200;
 });
 
 const cssButton = document.querySelector("button#css-toggle");

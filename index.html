@@ -82,13 +82,22 @@
         </p>
         <button id="font-toggle">Toggle Font</button>
 
-        <h3 class="text-subtitle text-color-font-secondary">Dark Mode</h3>
+        <h3 class="text-subtitle text-color-font-secondary">Colour Palette</h3>
         <p class="text-body">
-          I’ve always wanted to implement a “Dark Mode” but haven’t had the
-          opportunity to implement it on a professional project... so of course
-          I’m going to do so here. Using CSS Variables declared on the root
-          document makes this super easy.
+          Colour is such an powerful tool for bringing cohesiveness to designs
+          but can be a headache for developers to implement a colour system is
+          not considered from the get go. Colour not only helps accent elements
+          pop but subtle notes added to blacks and whites bring cohesion to a
+          colour palette. I've put these principles to practice in this website
+          using <code>CSS Variables</code> and <code>hsla</code> colour
+          definitions.
         </p>
+        <p class="text-body">
+          The colour system of this website is built around a primary colour
+          hue. You can use the range input for fine-tuned control or select an
+          accessible hue from the preset buttons below.
+        </p>
+        <p class="text-body"></p>
         <div>
           <label for="hue-input">Hue</label>
           <input
@@ -100,6 +109,22 @@
             step="1"
           />
         </div>
+        <button
+          name="hue-preset"
+          data-hue-value="220"
+          style="--palette-hue: 220"
+        >
+          Bold Blue
+        </button>
+        <button name="hue-preset" data-hue-value="0" style="--palette-hue: 0">
+          Rich Red
+        </button>
+        <p class="text-body">
+          I’ve always wanted to implement a “Dark Mode” but haven’t had the
+          opportunity to implement it on a professional project... so of course
+          I’m going to do so here. Using CSS Variables declared on the root
+          document makes this super easy.
+        </p>
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
 
         <h3 class="text-subtitle text-color-font-secondary">Disabled CSS</h3>

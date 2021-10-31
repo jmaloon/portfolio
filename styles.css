@@ -108,9 +108,6 @@ span {
   letter-spacing: 0.02em;
 }
 
-.text-color-primary {
-  color: var(--palette-text-primary);
-}
 .text-color-secondary {
   color: var(--palette-text-secondary);
 }
@@ -122,9 +119,8 @@ button {
   position: relative;
   padding: 10px 32px;
 
-  color: var(--palette-text-primary);
   background: none;
-  border: 1px solid var(--palette-accent);
+  border: 1px solid hsla(var(--palette-hue, 220), 80%, 50%, 1);
   border-radius: 4px;
 
   cursor: pointer;
@@ -136,7 +132,7 @@ button::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--palette-accent);
+  background: hsla(var(--palette-hue, 220), 80%, 50%, 1);
   opacity: 0;
 }
 button:hover::before {
