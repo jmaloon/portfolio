@@ -3,10 +3,21 @@ abcelleraSection?.addEventListener("mouseenter", function () {
   abcelleraSection.querySelector("animate").beginElement();
 });
 
+const hueInput = document.querySelector("input#hue-input");
+hueInput?.addEventListener("input", (event) => {
+  document.documentElement.style.setProperty(
+    "--palette-hue",
+    event.target.value
+  );
+});
+
 const darkModeButton = document.querySelector("button#dark-mode-toggle");
 darkModeButton?.addEventListener("click", function () {
   const darkClassName = "dark";
   const rootElement = document.documentElement;
+
+  // remove custom hue adjustments
+  rootElement.style.removeProperty("--palette-hue");
 
   const isDarkModeActive = rootElement.classList.contains(darkClassName);
   if (isDarkModeActive) {

@@ -8,6 +8,7 @@
       content="Josh Maloon's space. A place to showoff some of my skills."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,7 +44,7 @@
       <header class="content banner">
         <span class="text-title-3 text-color-font-secondary">Hi, I'm</span>
         <h1 class="text-title-1">
-          Josh <span class="font-weight-medium text-color-primary">Maloon</span>
+          Josh <span class="font-weight-medium text-color-accent">Maloon</span>
         </h1>
         <p class="text-subtitle">
           I’m a frontend enthusiast currently working at AbCellera in Vancouver,
@@ -61,13 +62,23 @@
         <h3 class="text-subtitle text-color-font-secondary">Font Loading</h3>
         <p class="text-body">
           This website uses the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
-          <b>T</b>ext (FOUT) loading strategy to handle font loading. The FOUT strategy renders a system font until the web font is loaded and ready to be presented. This functionality can be achieved with the browser natively using the <code>font-display: swap</code> property, however I chose to implement using JavaScript for better support and more control.
+          <b>T</b>ext (FOUT) loading strategy to handle font loading. The FOUT
+          strategy renders a system font until the web font is loaded and ready
+          to be presented. This functionality can be achieved with the browser
+          natively using the <code>font-display: swap</code> property, however I
+          chose to implement using JavaScript for better support and more
+          control.
         </p>
         <p class="text-body">
-          Handling font loading is only part of the story. While the FOUT strategy doesn't block page rendering, it may lead to dramatic layout shifts when the system font is replaced by the web font. The layout shifts cannot be totally avoided but they can be minimized by managing the differences in type kerning, leading, and tracking. 
+          Handling font loading is only part of the story. While the FOUT
+          strategy doesn't block page rendering, it may lead to dramatic layout
+          shifts when the system font is replaced by the web font. The layout
+          shifts cannot be totally avoided but they can be minimized by managing
+          the differences in type kerning, leading, and tracking.
         </p>
         <p class="text-body">
-          The button below will change the font for the page. Click and observe how the content shifts when the font changes!
+          The button below will change the font for the page. Click and observe
+          how the content shifts when the font changes!
         </p>
         <button id="font-toggle">Toggle Font</button>
 
@@ -78,6 +89,17 @@
           I’m going to do so here. Using CSS Variables declared on the root
           document makes this super easy.
         </p>
+        <div>
+          <label for="hue-input">Hue</label>
+          <input
+            id="hue-input"
+            type="range"
+            name="volume"
+            min="0"
+            max="360"
+            step="1"
+          />
+        </div>
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
 
         <h3 class="text-subtitle text-color-font-secondary">Disabled CSS</h3>
