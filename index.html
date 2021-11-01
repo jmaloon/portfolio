@@ -97,7 +97,7 @@
           hue. You can use the range input for fine-tuned control or select an
           accessible hue from the preset buttons below.
         </p>
-        <p class="text-body"></p>
+        <br />
         <div>
           <label for="hue-input">Hue</label>
           <input
@@ -107,18 +107,51 @@
             min="0"
             max="360"
             step="1"
+            value="220"
           />
         </div>
-        <button
-          name="hue-preset"
-          data-hue-value="220"
-          style="--palette-hue: 220"
-        >
-          Bold Blue
-        </button>
-        <button name="hue-preset" data-hue-value="0" style="--palette-hue: 0">
-          Rich Red
-        </button>
+        <div class="light-only">
+          <button
+            name="hue-preset"
+            data-hue-value="220"
+            style="--palette-hue: 220"
+          >
+            Cerulean Blue
+          </button>
+          <button name="hue-preset" data-hue-value="0" style="--palette-hue: 0">
+            Venetian Red
+          </button>
+          <button
+            name="hue-preset"
+            data-hue-value="280"
+            style="--palette-hue: 280"
+          >
+            Dark Violet
+          </button>
+        </div>
+        <div class="dark-only">
+          <button
+            name="hue-preset"
+            data-hue-value="200"
+            style="--palette-hue: 200"
+          >
+            Light Sky Blue
+          </button>
+          <button
+            name="hue-preset"
+            data-hue-value="120"
+            style="--palette-hue: 120"
+          >
+            Screamin Green
+          </button>
+          <button
+            name="hue-preset"
+            data-hue-value="50"
+            style="--palette-hue: 50"
+          >
+            Arylide Yellow
+          </button>
+        </div>
         <p class="text-body">
           I’ve always wanted to implement a “Dark Mode” but haven’t had the
           opportunity to implement it on a professional project... so of course
