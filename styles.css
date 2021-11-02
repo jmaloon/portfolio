@@ -21,7 +21,7 @@
   );
   --palette-surface: hsl(var(--palette-hue), 25%, 98%);
   --palette-text-primary: hsl(var(--palette-hue), 80%, 10%);
-  --palette-text-secondary: hsl(var(--palette-hue), 10%, 40%);
+  --palette-text-secondary: hsl(var(--palette-hue), 15%, 25%);
 }
 :root.dark {
   color-scheme: dark;

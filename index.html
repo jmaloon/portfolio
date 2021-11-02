@@ -38,11 +38,10 @@
       }
     </script>
   </head>
-
   <body>
     <main>
       <header class="content banner">
-        <span class="text-title-3 text-color-font-secondary">Hi, I'm</span>
+        <span class="text-title-3 text-color-secondary">Hi, I'm</span>
         <h1 class="text-title-1">
           Josh <span class="font-weight-medium text-color-accent">Maloon</span>
         </h1>
@@ -54,128 +53,148 @@
       <!-- INTRODUCTION -->
       <div class="content introduction">
         <h2 class="text-title-3">Welcome to my playground!</h2>
-        <p class="text-body">
+        <p class="text-body text-color-secondary">
           This is a digital space for me to try new things and showcase some of
           my skills.
         </p>
-
-        <h3 class="text-subtitle text-color-font-secondary">Font Loading</h3>
-        <p class="text-body">
-          This website uses the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
-          <b>T</b>ext (FOUT) loading strategy to handle font loading. The FOUT
-          strategy renders a system font until the web font is loaded and ready
-          to be presented. This functionality can be achieved with the browser
-          natively using the <code>font-display: swap</code> property, however I
-          chose to implement using JavaScript for better support and more
-          control.
-        </p>
-        <p class="text-body">
-          Handling font loading is only part of the story. While the FOUT
-          strategy doesn't block page rendering, it may lead to dramatic layout
-          shifts when the system font is replaced by the web font. The layout
-          shifts cannot be totally avoided but they can be minimized by managing
-          the differences in type kerning, leading, and tracking.
-        </p>
-        <p class="text-body">
-          The button below will change the font for the page. Click and observe
-          how the content shifts when the font changes!
-        </p>
-        <button id="font-toggle">Toggle Font</button>
-
-        <h3 class="text-subtitle text-color-font-secondary">Colour Palette</h3>
-        <p class="text-body">
-          Colour is such an powerful tool for bringing cohesiveness to designs
-          but can be a headache for developers to implement a colour system is
-          not considered from the get go. Colour not only helps accent elements
-          pop but subtle notes added to blacks and whites bring cohesion to a
-          colour palette. I've put these principles to practice in this website
-          using <code>CSS Variables</code> and <code>hsla</code> colour
-          definitions.
-        </p>
-        <p class="text-body">
-          The colour system of this website is built around a primary colour
-          hue. You can use the range input for fine-tuned control or select an
-          accessible hue from the preset buttons below.
-        </p>
-        <br />
-        <div>
-          <label for="hue-input">Hue</label>
-          <input
-            id="hue-input"
-            type="range"
-            name="volume"
-            min="0"
-            max="360"
-            step="1"
-            value="220"
-          />
-        </div>
-        <div class="light-only">
-          <button
-            name="hue-preset"
-            data-hue-value="220"
-            style="--palette-hue: 220"
-          >
-            Cerulean Blue
-          </button>
-          <button name="hue-preset" data-hue-value="0" style="--palette-hue: 0">
-            Venetian Red
-          </button>
-          <button
-            name="hue-preset"
-            data-hue-value="280"
-            style="--palette-hue: 280"
-          >
-            Dark Violet
-          </button>
-        </div>
-        <div class="dark-only">
-          <button
-            name="hue-preset"
-            data-hue-value="200"
-            style="--palette-hue: 200"
-          >
-            Light Sky Blue
-          </button>
-          <button
-            name="hue-preset"
-            data-hue-value="120"
-            style="--palette-hue: 120"
-          >
-            Screamin Green
-          </button>
-          <button
-            name="hue-preset"
-            data-hue-value="50"
-            style="--palette-hue: 50"
-          >
-            Arylide Yellow
-          </button>
-        </div>
-        <p class="text-body">
-          I’ve always wanted to implement a “Dark Mode” but haven’t had the
-          opportunity to implement it on a professional project... so of course
-          I’m going to do so here. Using CSS Variables declared on the root
-          document makes this super easy.
-        </p>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-
-        <h3 class="text-subtitle text-color-font-secondary">Disabled CSS</h3>
-        <p class="text-body">
-          I built this website using a single HTML file with only one CSS file
-          (well maybe two) and one JS file. I try my best to keep things clean
-          and simple but I also make sure to keep things accessible, even
-          without CSS. Take a look at how this site looks without CSS.
-        </p>
-        <button id="css-toggle">Toggle CSS</button>
+        <section>
+          <h3 class="text-subtitle">Colour Palette</h3>
+          <p class="text-body text-color-secondary">
+            Colour is a powerful tool for building cohesive digital experiences.
+            For this website I've implemented a colour system that has deep
+            roots that touch all the colours presented on this site. The hue of
+            the accent colours are also present in the text and background
+            colours. Using colours with shared hues creates a sense of
+            continuity that would not exists without a colour system. This
+            website uses a single hue value to determine the entire colour
+            palette.
+            <!-- In this website I've implemented a color system that has
+            roots that touch almost all elements I've put these principles to
+            practice in this website using
+            <code>CSS Variables</code> and <code>hsla</code> colour definitions. -->
+          </p>
+          <p class="text-body text-color-secondary">
+            Below you can manually change the hue with the range input or choose
+            a preset colour with one of the buttons.
+          </p>
+          <div>
+            <label class="text-color-secondary" for="hue-input">Hue</label>
+            <input
+              id="hue-input"
+              type="range"
+              name="volume"
+              min="0"
+              max="360"
+              step="1"
+              value="220"
+            />
+          </div>
+          <div class="light-only">
+            <button
+              name="hue-preset"
+              data-hue-value="220"
+              style="--palette-hue: 220"
+            >
+              Cerulean Blue
+            </button>
+            <button
+              name="hue-preset"
+              data-hue-value="0"
+              style="--palette-hue: 0"
+            >
+              Venetian Red
+            </button>
+            <button
+              name="hue-preset"
+              data-hue-value="280"
+              style="--palette-hue: 280"
+            >
+              Dark Violet
+            </button>
+          </div>
+          <div class="dark-only">
+            <button
+              name="hue-preset"
+              data-hue-value="200"
+              style="--palette-hue: 200"
+            >
+              Light Sky Blue
+            </button>
+            <button
+              name="hue-preset"
+              data-hue-value="120"
+              style="--palette-hue: 120"
+            >
+              Screamin Green
+            </button>
+            <button
+              name="hue-preset"
+              data-hue-value="50"
+              style="--palette-hue: 50"
+            >
+              Arylide Yellow
+            </button>
+          </div>
+          <p class="text-body text-color-secondary">
+            The colour system is built with <code>CSS Variables</code> and
+            <code>hsla</code> colour definitions.
+          </p>
+          <p class="text-body text-color-secondary">
+            Using <code>hsla</code> colour definitions significantly simplified
+            the dynamic colour functionality problem of this website. Since
+            <code>hsla</code> functional notation accepts a hue value, all I had
+            to do was create a <code>CSS Variable</code> that represents the
+            dynamic hue value and update said variable using JavaScript.
+          </p>
+          <p class="text-body text-color-secondary">
+            Using <code>CSS Variables</code> was an easy decision as it allows
+            me to define values in one location and use the variables throughout
+            the stylesheet(s). This makes it super easy to create a "Dark Mode"
+            as I can redefine the colour definitions in one location
+            and...voila!
+          </p>
+          <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </section>
+        <section>
+          <h3 class="text-subtitle">Font Loading</h3>
+          <p class="text-body text-color-secondary">
+            This website uses the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
+            <b>T</b>ext (FOUT) loading strategy to handle font loading. The FOUT
+            strategy renders a system font until the web font is loaded and
+            ready to be presented. This functionality can be achieved with the
+            browser natively using the <code>font-display: swap</code> property,
+            however I chose to implement using JavaScript for better support and
+            more control.
+          </p>
+          <p class="text-body text-color-secondary">
+            Handling font loading is only part of the story. While the FOUT
+            strategy doesn't block page rendering, it may lead to dramatic
+            layout shifts when the system font is replaced by the web font. The
+            layout shifts cannot be totally avoided but they can be minimized by
+            managing the differences in type kerning, leading, and tracking.
+          </p>
+          <p class="text-body text-color-secondary">
+            The button below will change the font for the page. Click and
+            observe how the content shifts when the font changes!
+          </p>
+          <button id="font-toggle">Toggle Font</button>
+        </section>
+        <section>
+          <h3 class="text-subtitle">Disabled CSS</h3>
+          <p class="text-body text-color-secondary">
+            I built this website using a single HTML file with only one CSS file
+            (well maybe two) and one JS file. I try my best to keep things clean
+            and simple but I also make sure to keep things accessible, even
+            without CSS. Take a look at how this site looks without CSS.
+          </p>
+          <button id="css-toggle">Toggle CSS</button>
+        </section>
       </div>
       <!-- SKILLS -->
       <div class="content grid">
         <h2 class="text-title-2">My Skills</h2>
         <section>
-          <h3 class="text-overline text-color-font-secondary label">
-            Development
-          </h3>
+          <h3 class="text-overline text-color-secondary label">Development</h3>
           <ul class="text-subtitle">
             <li>
               <svg class="icon">
@@ -228,7 +247,7 @@
           </ul>
         </section>
         <section>
-          <h3 class="text-overline text-color-font-secondary label">Design</h3>
+          <h3 class="text-overline text-color-secondary label">Design</h3>
           <ul class="text-subtitle">
             <li>
               <svg class="icon">
@@ -267,7 +286,7 @@
       <div class="content list">
         <h2 class="text-title-2">My Experience</h2>
         <section id="experience_abcellera">
-          <h3 class="label text-overline text-color-font-secondary">
+          <h3 class="label text-overline text-color-secondary">
             2020 - Present
           </h3>
           <svg
@@ -299,7 +318,7 @@
           </svg>
           <div class="description">
             <h4 class="text-subtitle">AbCellera</h4>
-            <p class="text-body">
+            <p class="text-body text-color-secondary">
               As a part of the data visualization team, I contributed to the
               development of the propriety software Celium™. Harry Potter is a
               series of seven fantasy novels written by British author J. K.
@@ -314,15 +333,13 @@
           </div>
         </section>
         <section>
-          <h3 class="label text-overline text-color-font-secondary">
-            2017 - 2020
-          </h3>
+          <h3 class="label text-overline text-color-secondary">2017 - 2020</h3>
           <svg class="icon">
             <use href="#wize" />
           </svg>
           <div class="description">
             <h4 class="text-subtitle">Wize</h4>
-            <p class="text-body">
+            <p class="text-body text-color-secondary">
               As a individual contributor, I led the development of several
               large-scale projects from page rebuilds to do stuff. Since the
               release of the first novel, Harry Potter and the Philosopher's
@@ -341,15 +358,13 @@
           </div>
         </section>
         <section>
-          <h3 class="label text-overline text-color-font-secondary">
-            2015 - 2017
-          </h3>
+          <h3 class="label text-overline text-color-secondary">2015 - 2017</h3>
           <svg class="icon">
             <use href="#issi" />
           </svg>
           <div class="description">
             <h4 class="text-subtitle">Integrated Software Solutions</h4>
-            <p class="text-body">
+            <p class="text-body text-color-secondary">
               A play, Harry Potter and the Cursed Child, based on a story
               co-written by Rowling, premiered in London on 30 July 2016 at the
               Palace Theatre, and its script was published by Little, Brown. The
@@ -367,13 +382,13 @@
       <div class="content list">
         <h2 class="text-title-2">My Certificates</h2>
         <section>
-          <h3 class="label text-overline text-color-font-secondary">2021</h3>
+          <h3 class="label text-overline text-color-secondary">2021</h3>
           <svg class="icon">
             <use href="#coursera" />
           </svg>
           <div class="description">
             <h4 class="text-subtitle">Coursera</h4>
-            <p class="text-caption text-color-font-secondary">
+            <p class="text-caption text-color-secondary">
               <a
                 href="https://www.credly.com/badges/c61e53da-342c-4b10-8f73-c94eaaa603ab"
                 target="_blank"
@@ -385,13 +400,13 @@
           </div>
         </section>
         <section>
-          <h3 class="label text-overline text-color-font-secondary">2016</h3>
+          <h3 class="label text-overline text-color-secondary">2016</h3>
           <svg class="icon">
             <use href="#freecodecamp" />
           </svg>
           <div class="description">
             <h4 class="text-subtitle">freeCodeCamp</h4>
-            <p class="text-caption text-color-font-secondary">
+            <p class="text-caption text-color-secondary">
               <a
                 href="https://www.freecodecamp.org/jmaloon"
                 target="_blank"
