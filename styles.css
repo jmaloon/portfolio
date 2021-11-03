@@ -19,9 +19,9 @@
     80%,
     var(--palette-accent-lightness)
   );
-  --palette-surface: hsl(var(--palette-hue), 25%, 98%);
-  --palette-text-primary: hsl(var(--palette-hue), 80%, 10%);
-  --palette-text-secondary: hsl(var(--palette-hue), 15%, 25%);
+  --palette-surface: hsl(var(--palette-hue), 5%, 90%);
+  --palette-text-primary: hsl(var(--palette-hue), 50%, 5%);
+  --palette-text-secondary: hsl(var(--palette-hue), 5%, 20%);
 }
 :root.dark {
   color-scheme: dark;
@@ -29,9 +29,9 @@
   --palette-hue: 200;
   --palette-accent-lightness: 70%;
 
-  --palette-surface: hsl(var(--palette-hue), 10%, 5%);
-  --palette-text-primary: hsl(var(--palette-hue), 20%, 95%);
-  --palette-text-secondary: hsl(var(--palette-hue), 20%, 75%);
+  --palette-surface: hsl(var(--palette-hue), 5%, 10%);
+  --palette-text-primary: hsl(var(--palette-hue), 50%, 95%);
+  --palette-text-secondary: hsl(var(--palette-hue), 5%, 80%);
 }
 :root.fonts-loaded {
   --font-family: "Quicksand", sans-serif;
@@ -151,6 +151,10 @@ button::before {
 }
 button:hover::before {
   opacity: 0.08;
+}
+button:focus {
+  outline: 1px solid
+    hsl(var(--palette-hue), 80%, var(--palette-accent-lightness));
 }
 
 :root:not(.dark) .dark-only,
