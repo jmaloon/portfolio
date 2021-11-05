@@ -58,7 +58,7 @@
           my&nbsp;skills.
         </p>
         <section>
-          <h3 class="text-subtitle">Colour Palette</h3>
+          <h3 class="text-subtitle">Dynamic Colour Palette</h3>
           <p class="text-body text-color-secondary">
             Colour is a powerful tool for building cohesive digital experiences.
             Developing a thoughtful colour palette can create a sense of
@@ -143,15 +143,15 @@
           <p class="text-body text-color-secondary">
             Using <code>CSS Variables</code> was an easy decision as it allowed
             me to define values in one location. This made it super easy to
-            create a "Dark Mode" as I was able redefine the colour definitions in one
-            location and the changes will propagate like magic! Try it
+            create a "Dark Mode" as I was able redefine the colour definitions
+            in one location and the changes will propagate like magic! Try it
             out&nbsp;below.
           </p>
           <button id="dark-mode-toggle">Toggle Dark Mode</button>
         </section>
         <section>
-          <h3 class="text-subtitle">Font Loading</h3>
-          <p class="text-body text-color-secondary">
+          <h3 class="text-subtitle">Font Loading Strategy</h3>
+          <!-- <p class="text-body text-color-secondary">
             This website uses the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
             <b>T</b>ext (FOUT) loading strategy to handle font loading. The FOUT
             strategy renders a system font until the web font is loaded and
@@ -159,22 +159,40 @@
             browser natively using the <code>font-display: swap</code> property,
             however I chose to implement using JavaScript for better support and
             more control.
+          </p> -->
+          <p class="text-body text-color-secondary">
+            I have implemented the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
+            <b>T</b>ext (FOUT) loading strategy to handle web font loading on
+            this site. With FOUT, the content will be displayed using a system
+            (generic) font until the desired web (custom) font is loaded. This
+            all happens in an instant, or in other words, a "flash".
           </p>
           <p class="text-body text-color-secondary">
-            Handling font loading is only part of the story. While the FOUT
-            strategy doesn't block page rendering, it may lead to dramatic
-            layout shifts when the system font is replaced by the web font. The
-            layout shifts cannot be totally avoided but they can be minimized by
-            managing the differences in type kerning, leading, and tracking.
-          </p>
-          <p class="text-body text-color-secondary">
-            The button below will change the font for the page. Click and
-            observe how the content shifts when the font changes!
+            It probably happened so quickly that you didn't even notice it while
+            this site was loading (and don't bother reloading as your browser
+            has likely already cached the font). Fear not! Click the button
+            below to restore the text to it's "unstyled" glory.
           </p>
           <button id="font-toggle">Toggle Font</button>
+
+          <p class="text-body text-color-secondary">
+            Implementing FOUT is actually not very difficult at all. Most
+            browsers will do all the work for you natively using the
+            <code>font-display: swap</code> property. Even so, I went the
+            JavaScript route for even better support and control.
+          </p>
+          <p class="text-body text-color-secondary">
+            Implementation is only half of the story though. FOUT does not block
+            content rendering but it can result in dramatic layout shifts when
+            the system font is replaced by the web font. While not totally
+            avoidable, layout shifts can be minimized. On this site I've
+            mitigated layout shifts by styling the text according to the rendered font in
+            an effort to handle the differences in kerning, leading, and
+            tracking.
+          </p>
         </section>
         <section>
-          <h3 class="text-subtitle">Disabled CSS</h3>
+          <h3 class="text-subtitle">Life Without CSS</h3>
           <p class="text-body text-color-secondary">
             I built this website using a single HTML file with only one CSS file
             (well maybe two) and one JS file. I try my best to keep things clean
