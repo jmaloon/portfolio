@@ -237,23 +237,6 @@ button:focus {
   margin-right: 12px;
 }
 
-.list > section {
-  display: flex;
-}
-.list > section:hover > .icon {
-  color: var(--palette-accent);
-}
-.list > section h4 {
-  height: 40px;
-  line-height: 40px;
-}
-.list .icon {
-  margin-right: 12px;
-}
-.list .date {
-  margin-bottom: 8px;
-}
-
 button#dark-mode-toggle:after {
   content: " 🌙";
 }
@@ -293,16 +276,6 @@ button#dark-mode-toggle:after {
   .label {
     margin-bottom: 24px;
   }
-
-  .list > section {
-    flex-wrap: wrap;
-  }
-  .list .label {
-    flex-basis: 100%;
-  }
-  .list .description {
-    flex: 1;
-  }
 }
 
 @media (min-width: 1100px) {
@@ -312,9 +285,5 @@ button#dark-mode-toggle:after {
     top: 12px;
     right: calc(100% + 20px);
     text-align: right;
-  }
-
-  .list > section {
-    top: 6px;
   }
 }
