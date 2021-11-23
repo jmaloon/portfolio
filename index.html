@@ -46,8 +46,8 @@
           Josh <span class="font-weight-medium text-color-accent">Maloon</span>
         </h1>
         <p class="text-subtitle">
-          I’m a frontend enthusiast currently working at AbCellera in Vancouver,
-          Canada 🇨🇦.
+          I’m a frontend enthusiast currently working at AbCellera in
+          Vancouver,&nbsp;Canada 🇨🇦.
         </p>
       </header>
       <!-- INTRODUCTION -->
@@ -151,15 +151,6 @@
         </section>
         <section>
           <h3 class="text-subtitle">Font Loading Strategy</h3>
-          <!-- <p class="text-body text-color-secondary">
-            This website uses the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
-            <b>T</b>ext (FOUT) loading strategy to handle font loading. The FOUT
-            strategy renders a system font until the web font is loaded and
-            ready to be presented. This functionality can be achieved with the
-            browser natively using the <code>font-display: swap</code> property,
-            however I chose to implement using JavaScript for better support and
-            more control.
-          </p> -->
           <p class="text-body text-color-secondary">
             I have implemented the <b>F</b>lash <b>O</b>f <b>U</b>nstyled
             <b>T</b>ext (FOUT) loading strategy to handle web font loading on
@@ -186,18 +177,23 @@
             content rendering but it can result in dramatic layout shifts when
             the system font is replaced by the web font. While not totally
             avoidable, layout shifts can be minimized. On this site I've
-            mitigated layout shifts by styling the text according to the rendered font in
-            an effort to handle the differences in kerning, leading, and
-            tracking.
+            mitigated layout shifts by styling the text according to the
+            rendered font in an effort to handle the differences in kerning,
+            leading, and tracking.
           </p>
         </section>
         <section>
           <h3 class="text-subtitle">Life Without CSS</h3>
           <p class="text-body text-color-secondary">
-            I built this website using a single HTML file with only one CSS file
-            (well maybe two) and one JS file. I try my best to keep things clean
-            and simple but I also make sure to keep things accessible, even
-            without CSS. Take a look at how this site looks without CSS.
+            CSS, or Cascading Style Sheets, bring flare and style to the
+            internet. While CSS is the expected default while browsing the web,
+            there are a number of reasons why CSS may fail to load for a
+            website. In the off chance CSS is not available, it’s important that
+            developers use sound HTML principles so that the content is still
+            accessible for users and web crawlers alike.
+          </p>
+          <p class="text-body text-color-secondary">
+            Click below to explore this website without CSS.
           </p>
           <button id="css-toggle">Toggle CSS</button>
         </section>
