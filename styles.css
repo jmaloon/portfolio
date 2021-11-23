@@ -171,6 +171,7 @@ button:focus {
 }
 .content.banner > p {
   max-width: 520px;
+  margin-bottom: 16px;
 }
 .banner > h1 {
   margin-top: 8px;
