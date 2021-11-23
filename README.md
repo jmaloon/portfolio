@@ -1,4 +1,4 @@
 # Josh Maloon's Portfolio
 
-Deployed @ https://jmaloon.github.io/portfolio/
+Deployed @ https://www.joshmaloon.com
 
