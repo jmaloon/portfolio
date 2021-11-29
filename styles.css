@@ -13,53 +13,55 @@
   );
 
   --palette-hue: 220;
-  --palette-accent: hsl(var(--palette-hue), 80%, 45%);
+  --palette-accent-lightness: 45%;
+  --palette-accent: hsl(
+    var(--palette-hue),
+    80%,
+    var(--palette-accent-lightness)
+  );
   --palette-surface: hsl(var(--palette-hue), 10%, 95%);
   --palette-text-primary: hsl(var(--palette-hue), 50%, 5%);
   --palette-text-secondary: hsl(var(--palette-hue), 5%, 20%);
 
   --hue-track-gradient: linear-gradient(
     to right,
-    hsl(0, 80%, 45%),
-    hsl(20, 80%, 45%),
-    hsl(40, 80%, 45%),
-    hsl(60, 80%, 45%),
-    hsl(80, 80%, 45%),
-    hsl(100, 80%, 45%),
-    hsl(120, 80%, 45%),
-    hsl(140, 80%, 45%),
-    hsl(160, 80%, 45%),
-    hsl(180, 80%, 45%),
-    hsl(200, 80%, 45%),
-    hsl(220, 80%, 45%),
-    hsl(240, 80%, 45%),
-    hsl(260, 80%, 45%),
-    hsl(280, 80%, 45%),
-    hsl(300, 80%, 45%),
-    hsl(320, 80%, 45%),
-    hsl(340, 80%, 45%),
-    hsl(360, 80%, 45%)
+    hsl(0, 80%, var(--palette-accent-lightness)),
+    hsl(20, 80%, var(--palette-accent-lightness)),
+    hsl(40, 80%, var(--palette-accent-lightness)),
+    hsl(60, 80%, var(--palette-accent-lightness)),
+    hsl(80, 80%, var(--palette-accent-lightness)),
+    hsl(100, 80%, var(--palette-accent-lightness)),
+    hsl(120, 80%, var(--palette-accent-lightness)),
+    hsl(140, 80%, var(--palette-accent-lightness)),
+    hsl(160, 80%, var(--palette-accent-lightness)),
+    hsl(180, 80%, var(--palette-accent-lightness)),
+    hsl(200, 80%, var(--palette-accent-lightness)),
+    hsl(220, 80%, var(--palette-accent-lightness)),
+    hsl(240, 80%, var(--palette-accent-lightness)),
+    hsl(260, 80%, var(--palette-accent-lightness)),
+    hsl(280, 80%, var(--palette-accent-lightness)),
+    hsl(300, 80%, var(--palette-accent-lightness)),
+    hsl(320, 80%, var(--palette-accent-lightness)),
+    hsl(340, 80%, var(--palette-accent-lightness)),
+    hsl(360, 80%, var(--palette-accent-lightness))
   );
-  --hue-thumb-color: white;
-
-  --hue-thumb-radius: 8px;
-  --hue-thumb-height: 30px;
-  --hue-thumb-width: 20px;
-  --hue-thumb-border-width: 1px;
-  --hue-thumb-border-color: black;
-
   --hue-track-width: 100%;
   --hue-track-height: 10px;
+  --hue-track-border-color: var(--palette-text-primary);
   --hue-track-border-width: 1px;
-  --hue-track-border-color: black;
+  --hue-track-border-radius: 0px;
 
-  --hue-track-radius: 5px;
+  --hue-thumb-color: var(--palette-surface);
+  --hue-thumb-height: 30px;
+  --hue-thumb-width: 20px;
+  --hue-thumb-border-color: var(--palette-text-primary);
+  --hue-thumb-border-width: 1px;
+  --hue-thumb-border-radius: 4px;
 }
 :root.dark {
   color-scheme: dark;
 
-  --palette-hue: 200;
-  --palette-accent: hsl(var(--palette-hue), 80%, 70%);
+  --palette-accent-lightness: 70%;
   --palette-surface: hsl(var(--palette-hue), 10%, 5%);
   --palette-text-primary: hsl(var(--palette-hue), 50%, 95%);
   --palette-text-secondary: hsl(var(--palette-hue), 5%, 80%);
@@ -226,6 +228,8 @@ input[type="range"] {
   -webkit-appearance: none;
   width: var(--hue-track-width);
   margin: calc(var(--hue-thumb-height) / 2) 0;
+  background: none;
+  cursor: pointer;
 }
 input[type="range"]:focus {
   outline: none;
@@ -235,8 +239,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: var(--hue-track-height);
   background: var(--hue-track-gradient);
   border: var(--hue-track-border-width) solid var(--hue-track-border-color);
-  border-radius: var(--hue-track-radius);
-  cursor: pointer;
+  border-radius: var(--hue-track-border-radius);
 }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -248,28 +251,21 @@ input[type="range"]::-webkit-slider-thumb {
   );
   background: var(--hue-thumb-color);
   border: var(--hue-thumb-border-width) solid var(--hue-thumb-border-color);
-  border-radius: var(--hue-thumb-radius);
-  cursor: pointer;
-}
-/* lighten track color */
-input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: var(--hue-track-gradient);
+  border-radius: var(--hue-thumb-border-radius);
 }
 input[type="range"]::-moz-range-track {
   width: var(--hue-track-width);
   height: var(--hue-track-height);
   background: var(--hue-track-gradient);
   border: var(--hue-track-border-width) solid var(--hue-track-border-color);
-  border-radius: var(--hue-track-radius);
-  cursor: pointer;
+  border-radius: var(--hue-track-border-radius);
 }
 input[type="range"]::-moz-range-thumb {
   width: var(--hue-thumb-width);
   height: var(--hue-thumb-height);
   background: var(--hue-thumb-color);
   border: var(--hue-thumb-border-width) solid var(--hue-thumb-border-color);
-  border-radius: var(--hue-thumb-radius);
-  cursor: pointer;
+  border-radius: var(--hue-thumb-border-radius);
 }
 
 .icon {

@@ -1,8 +1,3 @@
-const abcelleraSection = document.querySelector("#experience_abcellera");
-abcelleraSection?.addEventListener("mouseenter", function () {
-  abcelleraSection.querySelector("animate").beginElement();
-});
-
 const hueInput = document.querySelector("input#hue-input");
 hueInput?.addEventListener("input", (event) => {
   document.documentElement.style.setProperty(
@@ -16,19 +11,14 @@ darkModeButton?.addEventListener("click", function () {
   const darkClassName = "dark";
   const rootElement = document.documentElement;
 
-  // remove custom hue adjustments
-  rootElement.style.removeProperty("--palette-hue");
-
   const isDarkModeActive = rootElement.classList.contains(darkClassName);
   if (isDarkModeActive) {
     // if the dark theme is active, we remove the class from the root element
     rootElement.classList.remove(darkClassName);
-    hueInput.value = 220;
     return;
   }
   // otherwise we activate dark mode by adding the class to the root element
   rootElement.classList.add(darkClassName);
-  hueInput.value = 200;
 });
 
 const cssButton = document.querySelector("button#css-toggle");
