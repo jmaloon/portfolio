@@ -13,23 +13,53 @@
   );
 
   --palette-hue: 220;
-  --palette-accent-lightness: 45%;
-
-  --palette-accent: hsl(
-    var(--palette-hue),
-    80%,
-    var(--palette-accent-lightness)
-  );
+  --palette-accent: hsl(var(--palette-hue), 80%, 45%);
   --palette-surface: hsl(var(--palette-hue), 10%, 95%);
   --palette-text-primary: hsl(var(--palette-hue), 50%, 5%);
   --palette-text-secondary: hsl(var(--palette-hue), 5%, 20%);
+
+  --hue-track-gradient: linear-gradient(
+    to right,
+    hsl(0, 80%, 45%),
+    hsl(20, 80%, 45%),
+    hsl(40, 80%, 45%),
+    hsl(60, 80%, 45%),
+    hsl(80, 80%, 45%),
+    hsl(100, 80%, 45%),
+    hsl(120, 80%, 45%),
+    hsl(140, 80%, 45%),
+    hsl(160, 80%, 45%),
+    hsl(180, 80%, 45%),
+    hsl(200, 80%, 45%),
+    hsl(220, 80%, 45%),
+    hsl(240, 80%, 45%),
+    hsl(260, 80%, 45%),
+    hsl(280, 80%, 45%),
+    hsl(300, 80%, 45%),
+    hsl(320, 80%, 45%),
+    hsl(340, 80%, 45%),
+    hsl(360, 80%, 45%)
+  );
+  --hue-thumb-color: white;
+
+  --hue-thumb-radius: 8px;
+  --hue-thumb-height: 30px;
+  --hue-thumb-width: 20px;
+  --hue-thumb-border-width: 1px;
+  --hue-thumb-border-color: black;
+
+  --hue-track-width: 100%;
+  --hue-track-height: 10px;
+  --hue-track-border-width: 1px;
+  --hue-track-border-color: black;
+
+  --hue-track-radius: 5px;
 }
 :root.dark {
   color-scheme: dark;
 
   --palette-hue: 200;
-  --palette-accent-lightness: 70%;
-
+  --palette-accent: hsl(var(--palette-hue), 80%, 70%);
   --palette-surface: hsl(var(--palette-hue), 10%, 5%);
   --palette-text-primary: hsl(var(--palette-hue), 50%, 95%);
   --palette-text-secondary: hsl(var(--palette-hue), 5%, 80%);
@@ -132,8 +162,7 @@ button {
 
   color: var(--palette-text-primary);
   background: none;
-  border: 1px solid
-    hsl(var(--palette-hue), 80%, var(--palette-accent-lightness));
+  border: 1px solid var(--palette-accent);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -144,22 +173,14 @@ button::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: hsl(var(--palette-hue), 80%, var(--palette-accent-lightness));
+  background: var(--palette-accent);
   opacity: 0;
 }
 button:hover::before {
   opacity: 0.08;
 }
 button:focus {
-  outline: 1px solid
-    hsl(var(--palette-hue), 80%, var(--palette-accent-lightness));
-}
-
-:root:not(.dark) .dark-only,
-:root.dark .light-only {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
+  outline: 1px solid var(--palette-accent);
 }
 
 .content.banner {
@@ -190,11 +211,65 @@ button:focus {
 .introduction h3 {
   margin-top: 48px;
 }
-.introduction p {
+.introduction p,
+.introduction .hue {
   margin-top: 16px;
 }
 .introduction button {
   margin-top: 24px;
+}
+.introduction .hue label {
+  display: block;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: var(--hue-track-width);
+  margin: calc(var(--hue-thumb-height) / 2) 0;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: var(--hue-track-width);
+  height: var(--hue-track-height);
+  background: var(--hue-track-gradient);
+  border: var(--hue-track-border-width) solid var(--hue-track-border-color);
+  border-radius: var(--hue-track-radius);
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--hue-thumb-width);
+  height: var(--hue-thumb-height);
+  margin-top: calc(
+    ((var(--hue-track-border-width) * -2 + var(--hue-track-height)) / 2) -
+      (var(--hue-thumb-height) / 2)
+  );
+  background: var(--hue-thumb-color);
+  border: var(--hue-thumb-border-width) solid var(--hue-thumb-border-color);
+  border-radius: var(--hue-thumb-radius);
+  cursor: pointer;
+}
+/* lighten track color */
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--hue-track-gradient);
+}
+input[type="range"]::-moz-range-track {
+  width: var(--hue-track-width);
+  height: var(--hue-track-height);
+  background: var(--hue-track-gradient);
+  border: var(--hue-track-border-width) solid var(--hue-track-border-color);
+  border-radius: var(--hue-track-radius);
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: var(--hue-thumb-width);
+  height: var(--hue-thumb-height);
+  background: var(--hue-thumb-color);
+  border: var(--hue-thumb-border-width) solid var(--hue-thumb-border-color);
+  border-radius: var(--hue-thumb-radius);
+  cursor: pointer;
 }
 
 .icon {

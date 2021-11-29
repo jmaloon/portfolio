@@ -10,16 +10,6 @@ hueInput?.addEventListener("input", (event) => {
     event.target.value
   );
 });
-const huePresetButtons = document.querySelectorAll('button[name="hue-preset"]');
-huePresetButtons.forEach((huePresetButton) =>
-  huePresetButton.addEventListener("click", function () {
-    const { hueValue } = huePresetButton.dataset;
-    // assign input value
-    hueInput.value = hueValue;
-    // assign css variable
-    document.documentElement.style.setProperty("--palette-hue", hueValue);
-  })
-);
 
 const darkModeButton = document.querySelector("button#dark-mode-toggle");
 darkModeButton?.addEventListener("click", function () {

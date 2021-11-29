@@ -96,12 +96,13 @@
           </p>
           <p class="text-body text-color-secondary">
             For this website, I implemented a dynamic colour system based on a
-            single hue value. Below you can change the base hue: either slide
-            the range input for fine-tuned control or choose a preset option by
-            clicking on the&nbsp;buttons.
+            single hue value. Below you can change the base hue by sliding the
+            toggle on the range&nbsp;input.
           </p>
-          <div>
-            <label class="text-color-secondary" for="hue-input">Hue</label>
+          <div class="hue">
+            <label class="text-caption text-color-secondary" for="hue-input"
+              >Hue</label
+            >
             <input
               id="hue-input"
               type="range"
@@ -111,52 +112,6 @@
               step="1"
               value="220"
             />
-          </div>
-          <div class="light-only">
-            <button
-              name="hue-preset"
-              data-hue-value="220"
-              style="--palette-hue: 220"
-            >
-              Cerulean Blue
-            </button>
-            <button
-              name="hue-preset"
-              data-hue-value="0"
-              style="--palette-hue: 0"
-            >
-              Venetian Red
-            </button>
-            <button
-              name="hue-preset"
-              data-hue-value="280"
-              style="--palette-hue: 280"
-            >
-              Dark Violet
-            </button>
-          </div>
-          <div class="dark-only">
-            <button
-              name="hue-preset"
-              data-hue-value="200"
-              style="--palette-hue: 200"
-            >
-              Light Sky Blue
-            </button>
-            <button
-              name="hue-preset"
-              data-hue-value="120"
-              style="--palette-hue: 120"
-            >
-              Screamin Green
-            </button>
-            <button
-              name="hue-preset"
-              data-hue-value="50"
-              style="--palette-hue: 50"
-            >
-              Arylide Yellow
-            </button>
           </div>
           <p class="text-body text-color-secondary">
             The colour system is built with <code>CSS Variables</code> and
