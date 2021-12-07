@@ -162,6 +162,17 @@ span {
   color: var(--palette-accent);
 }
 
+a,
+a:visited {
+  color: var(--palette-accent);
+}
+a:hover {
+  color: var(--palette-text-secondary);
+}
+a:active {
+  color: var(--palette-text-primary);
+}
+
 button {
   position: relative;
   padding: 10px 32px;
